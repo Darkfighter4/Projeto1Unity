@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,13 +29,14 @@ public class GameManager : MonoBehaviour
         restantes = restantes - valor;
         hud.text = $"Moneys restantes: {restantes}";
         source.PlayOneShot(clipMoeda);
-        
+
         if(restantes <= 0)
         {
             //ganhou o jogo
             msgVitoria.text = "  Para-Béns clap clap";
             source.Stop();
             source.PlayOneShot(clipVitoria);
+            SceneManager.LoadScene(+1);
         }
     }
 
