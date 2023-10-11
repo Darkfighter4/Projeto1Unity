@@ -36,13 +36,14 @@ public class GameManager : MonoBehaviour
             msgVitoria.text = "  Para-Béns clap clap";
             source.Stop();
             source.PlayOneShot(clipVitoria);
-            SceneManager.LoadScene(+1);
+            
+            Invoke("ProxFase", 5);
         }
     }
 
     // Update is called once per frame
-    void Update()
+    void ProxFase()
     {
-        
+        SceneManager.LoadScene(+1);
     }
 }
