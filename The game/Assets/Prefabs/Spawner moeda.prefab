@@ -112,5 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnItems:
   - {fileID: 1147658742625070936, guid: 705e0ac5fc7c01d4aafd63bfbf021319, type: 3}
-  spawnTime: 5
-  spawnDelay: 10
+  spawnTime: 10
+  spawnDelay: 25
