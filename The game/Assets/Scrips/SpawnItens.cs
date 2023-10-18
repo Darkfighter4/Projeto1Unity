@@ -23,5 +23,6 @@ public class SpawnItens : MonoBehaviour
     {
         random = Random.Range(0, SpawnItems.Length);
         Instantiate(SpawnItems[random], transform.position, transform.rotation);
+        GameObject.FindObjectOfType<GameManager>().AtualizarMoedas();
     }
 }

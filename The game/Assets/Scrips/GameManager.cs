@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour
     {
         TryGetComponent(out source);
 
+        AtualizarMoedas();
+    }
+
+    public void AtualizarMoedas()
+    {
         restantes = FindObjectsOfType<Moeda>().Length;
 
         hud.text = $"Moneys restantes: {restantes}";
     }
-
     public void SubtrairMoedas(int valor)
     {
         restantes = restantes - valor;
